@@ -95,6 +95,13 @@ public class MiProvider extends ContentProvider {
 
     @Override
     public int update(@NonNull Uri uri, @Nullable ContentValues contentValues, @Nullable String s, @Nullable String[] strings) {
-        return 0;
+        int result = 0;
+        switch(uriMatcher.match(uri)){
+            case 2:
+                String id = uri.getLastPathSegment();
+                result = dao.update(contentValues)?1:0;
+                break;
+        }
+        return result;
     }
 }

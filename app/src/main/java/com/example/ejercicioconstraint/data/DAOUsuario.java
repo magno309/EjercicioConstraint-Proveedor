@@ -44,6 +44,10 @@ public class DAOUsuario {
         return ad.update(DB.TABLE_NAME, cv, "_id=?", new String[]{String.valueOf(nuevo.getID())}) > 0;
     }
 
+    public boolean update(ContentValues cv) {
+        return ad.update(DB.TABLE_NAME, cv, "_id=?", new String[]{String.valueOf(cv.get(DB.COLUMNS_TABLE_USUARIOS[0]))}) > 0;
+    }
+
     public boolean delete(long id){
         return ad.delete(DB.TABLE_NAME, "_id=?", new String[]{String.valueOf(id)}) > 0;
     }
