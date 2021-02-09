@@ -3,7 +3,7 @@ package com.example.ejercicioconstraint.provider;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
-public class MiContrato {
+public final class MiContrato {
 
     public static final String AUTHORITY = "user_dictionary";
     public static final Uri CONTENT_URI = null;
