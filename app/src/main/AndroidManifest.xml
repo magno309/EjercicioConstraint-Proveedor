@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ejercicioconstraint" >
 
+    <permission android:name="com.example.ejercicioconstraint.READ" />
+    <permission android:name="com.example.ejercicioconstraint.WRITE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -27,6 +30,8 @@
             android:authorities="com.example.ejercicioconstraint.provider"
             android:name=".provider.MiProvider"
             android:exported="true"
+            android:readPermission="com.example.ejercicioconstraint.READ"
+            android:writePermission="com.example.ejercicioconstraint.WRITE"
             />
     </application>
 
